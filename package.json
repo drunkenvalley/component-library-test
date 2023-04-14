@@ -9,6 +9,14 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
+  "main": "./dist/lib.umd.js",
+  "module": "./dist/lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lib.es.js",
+      "require": "./dist/lib.umd.js"
+    }
+  },
   "dependencies": {
     "vue": "^2.7.7"
   },

@@ -16,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/lib.ts"),
       name: "Vue2",
-      fileName: (format) => `vue2.${format}.js`,
+      fileName: (format) => `lib.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],

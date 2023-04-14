@@ -6,11 +6,18 @@
     <slot></slot>
   </select>
 </template>
+<style scoped>
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+</style>
 <script lang="ts">
 export default {
   props: {
     options: {
-      type: Array,
+      type: Array<{ value: string; text: string }>,
       default: () => [],
     },
   },
